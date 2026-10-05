@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            border: 2px solid black;
+        } */
+        label{
+            font-weight: bold;
+     }
+     h1{
+        text-align: center;
+        font-size: 35px;
+
+     }
+     button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            background-color: #1e3a5f;
+            color: white;
+     }
+     input {
+            padding: 8px;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            max-width: 100%;
+            box-sizing: border-box;
+
+        }
+        #result {
+            background-color:lightgray;
+
+        }
+        button:hover {
+    background-color: #2d5a87;
+}
+        .box{
+            border:2px solid #1e3a5f;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: rgb(235, 237, 245);
+            height: 450px;
+            width: 320px; 
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .container {
+         display: flex;
+         justify-content: flex-start;
+         gap: 40px;
+         flex-wrap: wrap;
+         
+        }
+        /* Responsive CSS */
+        @media (max-width:500px) {
+            h1 {
+                font-size: 28px;
+            }
+            .box{
+                width:95%;
+                padding: 15px;
+                height: auto;
+            }
+            input {
+                width:100%;
+                margin:15px 0;
+
+            }
+            .container{
+                flex-direction:column;
+                align-items: center;
+            }
+        }
+        .box5 {
+    height: 500px;
+}
+.box6 {
+    height: 500px;
+}
+.box7 {
+    height: 500px;
+}
+.box8 {
+    height: 500px;
+}
+.box9 {
+    height: 500px;
+}
+.box10 {
+    height: 500px;
+}
+.box11 {
+    height: 500px;
+}
+.box12 {
+    height: 500px;
+}
+
+
+    </style>
+    <script>
+        // program 3
+        function calculatesum() {
+            let n = parseInt(document.getElementById("num").value);
+            let sum = n * (n+1) / 2;
+            document.getElementById("result").value = sum;
+        }
+        // program 4
+        function calculateAverage() {
+            let n = parseInt(document.getElementById("num2").value);
+
+            let avg = (n + 1) / 2;
+
+            document.getElementById("result1").value = avg;
+        }
+        // program 5
+        function calculateAvg() {
+    let n = parseInt(document.getElementById("num2").value);
+
+    let average = (n + 1) / 2;
+
+    document.getElementById("result2").value = average;
+}
+//program 6
+    function calculateProfit() {
+    let cp = parseInt(document.getElementById("cp").value);
+    let sp = parseInt(document.getElementById("sp").value);
+
+    let profit = sp - cp;
+    let percentage = (profit / cp) * 100;
+
+    document.getElementById("result3").value = percentage + "%";
+}
+//program 7
+function calculateSI() {
+
+    let p = parseInt(document.getElementById("principal").value);
+    let r = parseInt(document.getElementById("rate").value);
+    let t = parseInt(document.getElementById("time").value);
+
+    let si = (p * r * t) / 100;
+
+    document.getElementById("siResult").value = si;
+}
+//program 8
+    function calculateMissingAngle() {
+
+    let angle1 = parseInt(document.getElementById("angle1").value);
+    let angle2 = parseInt(document.getElementById("angle2").value);
+
+    let missingAngle = 180 - angle1 - angle2;
+
+    document.getElementById("angleResult").value = missingAngle + "°";
+}
+// program 9
+function findLastDigit() {
+
+    let n = parseInt(document.getElementById("lastNum").value);
+
+    let lastDigit = n % 10;
+
+    document.getElementById("lastResult").value = lastDigit;
+}
+// program 10
+function removeLastDigit() {
+
+    let n = parseInt(document.getElementById("removeNum").value);
+
+    let result = Math.floor(n / 10);
+
+    document.getElementById("removeResult").value = result;
+}
+// program 11
+function findFirstDigit() {
+
+    let n = parseInt(document.getElementById("threeNum").value);
+
+    let firstDigit = Math.floor(n / 100);
+
+    document.getElementById("firstResult").value = firstDigit;
+}
+// program 12
+function findFirstDigit5() {
+
+    let n = parseInt(document.getElementById("fiveNum").value);
+
+    let firstDigit = Math.floor(n / 10000);
+
+    document.getElementById("fiveResult").value = firstDigit;
+}
+// program 13
+function convertTemperature() {
+
+    let c = parseInt(document.getElementById("celsius").value);
+
+    let fahrenheit = (c * 9 / 5) + 32;
+
+    document.getElementById("fahrenheitResult").value = fahrenheit;
+}
+// program 14
+function convertToCelsius() {
+
+    let f = parseInt(document.getElementById("fahrenheit").value);
+
+    let celsius = (f - 32) * 5 / 9;
+
+    document.getElementById("celsiusResult").value = celsius;
+}
+// program 15
+function calculateGrossSalary() {
+
+    let basic = parseInt(document.getElementById("basicSalary").value);
+    let hra = parseInt(document.getElementById("hra").value);
+    let da = parseInt(document.getElementById("da").value);
+
+    let grossSalary = basic + hra + da;
+
+    document.getElementById("grossResult").value = grossSalary;
+}
+ //program 16
+ function swapNumbers() {
+
+    let a = parseInt(document.getElementById("swapNum1").value);
+    let b = parseInt(document.getElementById("swapNum2").value);
+
+    let temp = a;
+    a = b;
+    b = temp;
+
+    document.getElementById("swapResult1").value = a;
+    document.getElementById("swapResult2").value = b;
+}
+//program 17
+function swapWithoutThird() {
+
+    let a = parseInt(document.getElementById("swapA").value);
+    let b = parseInt(document.getElementById("swapB").value);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    document.getElementById("swapResultA").value = a;
+    document.getElementById("swapResultB").value = b;
+}
+//program 18
+function calculateAverage3() {
+    let num1 = parseInt(document.getElementById("avgNum1").value);
+    let num2 = parseInt(document.getElementById("avgNum2").value);
+    let num3 = parseInt(document.getElementById("avgNum3").value);
+
+    let average = (num1 + num2 + num3) / 3;
+
+    document.getElementById("avgResult").value = average;
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+    <!-- program 3 -->
+    <div class="box">
+    <h1>Sum Of N Natural Numbers</h1>
+    <label>Enter Number:</label><br/>
+    <input type="text" placeholder="Enetr Number Only" id="num" ><br/>
+    <label>Result</label><br/>
+    <input type="text" id="result"><br/>
+    <button onclick="calculatesum()">Calculate Sum</button>
+    </div>
+    <!-- program 4 -->
+     <div class="box">
+    <h1>Average of First N Natural Numbers</h1>
+
+    <label>Enter Number:</label><br/>
+    <input type="text" id="num2" placeholder="Enter Number"><br/>
+    <label>Result:</label><br/>
+    <input type="text" id="result1"><br/>
+    <button onclick="calculateAverage()">Calculate Average</button>
+    </div>
+     <!-- program 5 -->
+    <div class="box">
+    <h1>Average of N Natural Numbers</h1>
+
+    <label>Enter Number:</label><br>
+    <input type="text" id="num2" placeholder="Enter Number"><br>
+
+    <label>Result:</label><br>
+    <input type="text" id="result2" readonly><br>
+
+    <button onclick="calculateAvg()">Calculate Average</button>
+</div>
+<!-- program 6 -->
+    <div class="box">
+    <h1>Profit Percentage</h1>
+
+    <label>Cost Price:</label><br>
+    <input type="text" id="cp" placeholder="Enter Cost Price"><br>
+
+    <label>Selling Price:</label><br>
+    <input type="text" id="sp" placeholder="Enter Selling Price"><br>
+
+    <label>Profit Percentage:</label><br>
+    <input type="text" id="result3" readonly><br>
+
+    <button onclick="calculateProfit()">Calculate Profit</button>
+</div>
+<!-- program 7 -->
+ 
+<div class="box box5">
+
+    <h1>Simple Interest</h1>
+
+    <label>Principal Amount:</label><br>
+    <input type="text" id="principal" placeholder="Enter Principal"><br>
+
+    <label>Rate of Interest:</label><br>
+    <input type="text" id="rate" placeholder="Enter Rate"><br>
+
+    <label>Time:</label><br>
+    <input type="text" id="time" placeholder="Enter Time"><br>
+
+    <label>Simple Interest:</label><br>
+    <input type="text" id="siResult" readonly><br>
+
+    <button onclick="calculateSI()">Calculate SI</button>
+
+</div>
+<!-- Program 8 -->
+<div class="box box6">
+
+    <h1>Missing Angle of Triangle</h1>
+
+    <label>Enter First Angle:</label><br>
+    <input type="text" id="angle1" placeholder="Enter Angle"><br>
+
+    <label>Enter Second Angle:</label><br>
+    <input type="text" id="angle2" placeholder="Enter Angle"><br>
+
+    <label>Missing Angle:</label><br>
+    <input type="text" id="angleResult" readonly><br>
+
+    <button onclick="calculateMissingAngle()">
+        Calculate Angle
+    </button>
+
+</div>
+<!-- Program 9 -->
+<div class="box box7">
+
+    <h1>Last Digit of a Number</h1>
+
+    <label>Enter Number:</label><br>
+    <input type="text" id="lastNum" placeholder="Enter Number"><br>
+
+    <label>Last Digit:</label><br>
+    <input type="text" id="lastResult" readonly><br>
+
+    <button onclick="findLastDigit()">
+        Find Last Digit
+    </button>
+
+</div>
+<!-- Program 10 -->
+<div class="box box8">
+
+    <h1>Remove Last Digit</h1>
+
+    <label>Enter Number:</label><br>
+    <input type="text" id="removeNum" placeholder="Enter Number"><br>
+
+    <label>Result:</label><br>
+    <input type="text" id="removeResult" readonly><br>
+
+    <button onclick="removeLastDigit()">
+        Remove Last Digit
+    </button>
+
+</div>
+<!-- Program 11 -->
+<div class="box ">
+
+    <h1>First Digit of 3 Digit Number</h1>
+
+    <label>Enter 3 Digit Number:</label><br>
+    <input type="text" id="threeNum" placeholder="Enter Number"><br>
+
+    <label>First Digit:</label><br>
+    <input type="text" id="firstResult" readonly><br>
+
+    <button onclick="findFirstDigit()">
+        Find First Digit
+    </button>
+
+</div>
+<!-- Program 12 -->
+<div class="box ">
+
+    <h1>First Digit of 5 Digit Number</h1>
+
+    <label>Enter 5 Digit Number:</label><br>
+    <input type="text" id="fiveNum" placeholder="Enter Number"><br>
+
+    <label>First Digit:</label><br>
+    <input type="text" id="fiveResult" readonly><br>
+
+    <button onclick="findFirstDigit5()">
+        Find First Digit
+    </button>
+
+</div>
+<!-- Program 13 -->
+<div class="box">
+
+    <h1>Celsius to Fahrenheit</h1>
+
+    <label>Enter Celsius:</label><br>
+    <input type="text" id="celsius" placeholder="Enter Celsius"><br>
+
+    <label>Fahrenheit:</label><br>
+    <input type="text" id="fahrenheitResult" readonly><br>
+
+    <button onclick="convertTemperature()">
+        Convert
+    </button>
+
+</div>
+<!-- Program 14 -->
+<div class="box">
+
+    <h1>Fahrenheit to Celsius</h1>
+
+    <label>Enter Fahrenheit:</label><br>
+    <input type="text" id="fahrenheit" placeholder="Enter Fahrenheit"><br>
+
+    <label>Celsius:</label><br>
+    <input type="text" id="celsiusResult" readonly><br>
+
+    <button onclick="convertToCelsius()">
+        Convert
+    </button>
+
+</div>
+<!-- Program 15 -->
+<div class="box box9">
+
+    <h1>Gross Salary</h1>
+
+    <label>Basic Salary:</label><br>
+    <input type="text" id="basicSalary" placeholder="Enter Basic Salary"><br>
+
+    <label>HRA:</label><br>
+    <input type="text" id="hra" placeholder="Enter HRA"><br>
+
+    <label>DA:</label><br>
+    <input type="text" id="da" placeholder="Enter DA"><br>
+
+    <label>Gross Salary:</label><br>
+    <input type="text" id="grossResult" readonly><br>
+
+    <button onclick="calculateGrossSalary()">
+        Calculate Salary
+    </button>
+
+</div>
+<!-- Program 16 -->
+<div class="box box10">
+
+    <h1>Swap Two Numbers</h1>
+
+    <label>Enter First Number:</label><br>
+    <input type="text" id="swapNum1" placeholder="Enter Number"><br>
+
+    <label>Enter Second Number:</label><br>
+    <input type="text" id="swapNum2" placeholder="Enter Number"><br>
+
+    <label>After Swapping:</label><br>
+    <input type="text" id="swapResult1" readonly><br>
+
+    <input type="text" id="swapResult2" readonly><br>
+
+    <button onclick="swapNumbers()">
+        Swap Numbers
+    </button>
+
+</div>
+<!-- Program 17 -->
+<div class="box box11">
+
+    <h1>Swap Without Third Variable</h1>
+
+    <label>Enter First Number:</label><br>
+    <input type="text" id="swapA" placeholder="Enter Number"><br>
+
+    <label>Enter Second Number:</label><br>
+    <input type="text" id="swapB" placeholder="Enter Number"><br>
+
+    <label>After Swapping:</label><br>
+    <input type="text" id="swapResultA" readonly><br>
+
+    <input type="text" id="swapResultB" readonly><br>
+
+    <button onclick="swapWithoutThird()">
+        Swap Numbers
+    </button>
+
+</div>
+<div class="box box12">
+    <h1>Average of 3 Numbers</h1>
+
+    <label>Enter First Number:</label><br>
+    <input type="text" id="avgNum1" placeholder="Enter Number"><br>
+
+    <label>Enter Second Number:</label><br>
+    <input type="text" id="avgNum2" placeholder="Enter Number"><br>
+
+    <label>Enter Third Number:</label><br>
+    <input type="text" id="avgNum3" placeholder="Enter Number"><br>
+
+    <label>Average:</label><br>
+    <input type="text" id="avgResult" readonly><br>
+
+    <button onclick="calculateAverage3()">Calculate Average</button>
+</div>
+
+    </div>
+
+
+    
+</body>
+</html>
